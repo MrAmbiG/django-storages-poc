@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "django-storages-poc"
+version = "0.1.0"
+description = "proof of concept for django-storages module to be used for django"
+authors = ["Gajendra D Ambi"]
+license = "None"
+readme = "README.md"
+packages = [{include = "django_storages_poc"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.1"
+django-storages = "^1.13.2"
+pillow = "^9.5.0"
+django-bootstrap-v5 = "^1.0.11"
+django-crispy-forms = "^2.0"
+psycopg2-binary = "^2.9.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
