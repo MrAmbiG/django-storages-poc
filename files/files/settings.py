@@ -158,7 +158,7 @@ STORAGES = {
 
     # errors out without staticfiles configuration (documentation says it is optional but apparently it is mandatory if we use django-storages app, may be a bug)
 }
-FTP_STORAGE_LOCATION = FTP_STORAGE_LOCATION
+FTP_STORAGE_LOCATION = f"ftp://{FTPUSER}:{FTPPASS}@{FTPSERVER}:{FTPPORT}"
 BASE_URL = "/base/"
 
 AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID
