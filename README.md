@@ -30,21 +30,21 @@ django storages as a backend to manage user files.
     - upload files in home page, check files in storages/ftp/data section of this repo
 
 # contents of files/config.py
-SECRET_KEY = ""
-DEBUG = True
-ADMINPATH = "admin"
+SECRET_KEY = "" <br>
+DEBUG = True <br>
+ADMINPATH = "admin" <br>
 
-DB_NAME = ""
-DB_USER = ""
-DB_PASS = ""
-DB_HOST = "" # i recommend elephantsql for testing. its free.
+DB_NAME = "" <br>
+DB_USER = "" <br>
+DB_PASS = "" <br>
+DB_HOST = "" # i recommend elephantsql for testing. its free. <br>
 
-FTPUSER = ""
-FTPPASS =""
-FTPSERVER = ""
-FTPPORT = 21
+FTPUSER = "" <br>
+FTPPASS ="" <br>
+FTPSERVER = "" <br>
+FTPPORT = 21 <br>
 
-AWS_ACCESS_KEY_ID = "minioadmin"
-AWS_SECRET_ACCESS_KEY = "minioadmin"
-AWS_STORAGE_BUCKET_NAME = ""
-AWS_S3_ENDPOINT_URL = "http://localhost:9000"
+AWS_ACCESS_KEY_ID = "minioadmin" <br>
+AWS_SECRET_ACCESS_KEY = "minioadmin" <br>
+AWS_STORAGE_BUCKET_NAME = "" <br>
+AWS_S3_ENDPOINT_URL = "http://localhost:9000" <br>
