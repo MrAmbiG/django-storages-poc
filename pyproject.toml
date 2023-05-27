@@ -17,6 +17,7 @@ psycopg2-binary = "^2.9.6"
 psycopg2 = "^2.9.6"
 django-storages = "^1.13.2"
 crispy-bootstrap5 = "^0.7"
+boto3 = "^1.26.142"
 
 
 [build-system]

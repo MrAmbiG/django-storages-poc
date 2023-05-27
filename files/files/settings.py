@@ -146,13 +146,25 @@ MEDIA_URL = "/media/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 SITE_ID = 1
+
 # django storages
 STORAGES = {
-    "default": {"BACKEND": "storages.backends.ftp.FTPStorage"},
-    "staticfiles": {"BACKEND": "storages.backends.ftp.FTPStorage"},
+    # ftp
+    # "default": {"BACKEND": "storages.backends.ftp.FTPStorage"},
+    # "staticfiles": {"BACKEND": "storages.backends.ftp.FTPStorage"},
+    # s3
+    "default": {"BACKEND": "storages.backends.s3boto3.S3Boto3Storage"},
+    "staticfiles": {"BACKEND": "storages.backends.s3boto3.S3StaticStorage"},
+
+    # errors out without staticfiles configuration (documentation says it is optional but apparently it is mandatory if we use django-storages app, may be a bug)
 }
 FTP_STORAGE_LOCATION = FTP_STORAGE_LOCATION
 BASE_URL = "/base/"
+
+AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY = AWS_SECRET_ACCESS_KEY
+AWS_STORAGE_BUCKET_NAME = AWS_STORAGE_BUCKET_NAME
+AWS_S3_ENDPOINT_URL = AWS_S3_ENDPOINT_URL
 # django storages end
 
 # crispy forms
