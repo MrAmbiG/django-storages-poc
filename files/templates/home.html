@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block content %}
+
+<div class="mx-auto card rounded bg-light" style="width:33rem;">
+    <div class="container">
+        <br>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input class="p-2 btn btn-outline-success btn-c" type="submit" value="Upload Image">
+        </form>
+        <br>
+    </div>
+</div>
+
+{% endblock content %}
