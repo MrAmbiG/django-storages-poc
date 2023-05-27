@@ -9,8 +9,25 @@ django storages as a backend to manage user files.
 - get a free tier postgresql instance from elephantsql for testing, update config.py with those secrets
 - poetry install
 - poetry shell (Activate virtual env) (to deactivate & exit virtualenv `exit`; to deactivate virtualenv `deactivate`)
-- To test for ftp, uncomment ftp settings in STORAGES & comment out s3 settings in settings.py; to test for s3, do the vice versa.
-- python files/manage.py runserver
+
+# local ftp
+- `make ftpup` brings up the ftp server
+- `make ftpdown` brign down the ftp server
+
+# local s3 minio storage
+- `make s3up` brings up the s3 minio storage server
+- `make s3down` brings down the s3 storage server
+- go to AWS_S3_ENDPOINT_URL ("http://localhost:9000"), create a bucket
+
+- test with s3
+    - In settings.py comment out ftp settings in the STORAGES section. uncomment ftp settings if they are uncommented
+    - `make runserver`
+    - upload files in home page, files will be seen in your minio bucket
+
+- test with ftp
+    - In settings.py comment out s3 settings in the STORAGES section. uncomment s3 settings if they are uncommented
+    - `make runserver`
+    - upload files in home page, check files in storages/ftp/data section of this repo
 
 # contents of files/config.py
 SECRET_KEY = ""
